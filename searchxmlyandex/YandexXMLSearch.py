@@ -31,17 +31,20 @@ class YandexXMLSearch:
         results = [results for results in self.response.iter('results')][0]
         resultsCount = [count for count in results.iter('page')][0]
         return int(resultsCount.attrib['last'])
-        
+
     def search(self):
         url = self.search_url+'"%s"' %(self.query)
         request = requests.get(url)
-        response = ET.fromstring(request.content)[1]
-        self.response = response
-    
+	try:
+	        response = ET.fromstring(request.content)[1]
+        	self.response = response
+	except error as e:
+		raise 'API_KEY/username is possibly wrong.'
+
     def getResultJSONString(self):
         results = self.getAllResults()
         resultList = list()
-        
+
         for result in results:
             try:
                 result_id = [doc_id for doc_id in result.iter('doc')][0].attrib['id']
