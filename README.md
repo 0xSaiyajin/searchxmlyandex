@@ -2,6 +2,10 @@
 
 You can easily convert XML data to JSON data which fetched from YandexXMLSearch API.
 
+### Module Page
+
+[searchxmlyandex](https://pypi.org/project/searchxmlyandex/)
+
 ### Dependencies
 
 * Python<=2.7
