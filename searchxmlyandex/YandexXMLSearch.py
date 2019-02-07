@@ -35,11 +35,11 @@ class YandexXMLSearch:
     def search(self):
         url = self.search_url+'"%s"' %(self.query)
         request = requests.get(url)
-	try:
-	    response = ET.fromstring(request.content)[1]
+        try:
+            response = ET.fromstring(request.content)[1]
             self.response = response
-	except IndexError as e:
-	    print('API_KEY/username is possibly wrong.')
+        except IndexError as e:
+            print('API_KEY/username is possibly wrong.')
 
     def getResultJSONString(self):
         results = self.getAllResults()
