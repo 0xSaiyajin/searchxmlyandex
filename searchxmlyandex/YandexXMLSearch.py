@@ -22,8 +22,8 @@ class YandexXMLSearch:
         
     def getTotalPageCount(self):
         count = (self.getTotalResultCount() / 10) + 1   # count limitation.
-        if count > 5:
-            return 5
+        if count > 9:
+            return 10
         else:
             return count
     
