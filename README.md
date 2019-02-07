@@ -44,7 +44,7 @@ parser = YandexXMLSearch(user,api_key,query)
 
 * **Ataberk Yavuzer** - [0xSaiyajin](https://github.com/0xSaiyajin)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/0xSaiyajin/searchxmlyandex/contributors) who participated in this project.
 
 ## License
 
