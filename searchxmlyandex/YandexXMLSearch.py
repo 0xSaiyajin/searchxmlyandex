@@ -38,7 +38,7 @@ class YandexXMLSearch:
 	try:
 	        response = ET.fromstring(request.content)[1]
         	self.response = response
-	except error as e:
+	except IndexError as e:
 		raise 'API_KEY/username is possibly wrong.'
 
     def getResultJSONString(self):
