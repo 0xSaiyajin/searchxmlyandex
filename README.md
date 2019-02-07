@@ -2,7 +2,7 @@
 
 You can easily convert XML data to JSON data which fetched from YandexXMLSearch API.
 
-[API_URL](https://xml.yandex.com)
+https://xml.yandex.com
 
 ### Module Page
 
