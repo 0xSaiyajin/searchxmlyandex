@@ -27,9 +27,9 @@ Example usage as shown below.
 
 ```
 from searchxmlyandex.YandexXMLSearch import YandexXMLSearch
-user, api_key = 'username','api_key'
+user, api_key = 'username', 'api_key'
 query = 'your_input'
-parser = YandexXMLSearch(user,api_key,query)
+parser = YandexXMLSearch(user, api_key, query)
 ```
 
 ### Method List
