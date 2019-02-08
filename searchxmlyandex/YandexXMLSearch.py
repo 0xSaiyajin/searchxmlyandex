@@ -25,7 +25,7 @@ class YandexXMLSearch:
         if count > 9:
             return 10
         else:
-            return count
+            return int(count)
     
     def getTotalResultCount(self):
         results = [results for results in self.response.iter('results')][0]

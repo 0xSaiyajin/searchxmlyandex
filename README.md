@@ -28,7 +28,7 @@ Example usage as shown below.
 ```
 from searchxmlyandex.YandexXMLSearch import YandexXMLSearch
 user, api_key = 'username','api_key'
-query = raw_input('Search Term: ')
+query = 'your_input'
 parser = YandexXMLSearch(user,api_key,query)
 ```
 
