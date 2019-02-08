@@ -1,1 +1,1 @@
-name = "searchxmlyandex"
+name = "YandexXMLSearch"

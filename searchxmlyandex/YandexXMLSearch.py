@@ -21,7 +21,7 @@ class YandexXMLSearch:
         self.search()
         
     def getTotalPageCount(self):
-        count = (self.getTotalResultCount() / 10) + 1   # count limitation.
+        count = (self.getTotalResultCount() / 10) + 1   # count limitation will be fixed.
         if count > 9:
             return 10
         else:
@@ -60,15 +60,15 @@ class YandexXMLSearch:
                 result_domain = str()
             try:
                 result_title = [result_title for result_title in result.iter('title')][0]
-                cleaned_title = ET.tostring(result_title,
-                                            method='xml').replace('<hlword>','').replace('</hlword>','')
+                cleaned_title = ET.tostring(result_title, method='xml')
+                cleaned_title = cleaned_title.decode('UTF-8').replace('<hlword>','').replace('</hlword>','')
                 result_title = ET.fromstring(cleaned_title).text
             except IndexError as e:
                 result_title = str()
             try:
                 result_content = [result_content for result_content in result.iter('passage')][0]
-                cleaned_content = ET.tostring(result_content,
-                                              method='xml').replace('<hlword>','').replace('</hlword>','')
+                cleaned_content = ET.tostring(result_content, method='xml')
+                cleaned_content = cleaned_content.decode('UTF-8').replace('<hlword>', '').replace('</hlword>', '')
                 result_content = ET.fromstring(cleaned_content).text
             except IndexError as e:
                 result_content = str()
