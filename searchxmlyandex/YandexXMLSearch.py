@@ -21,11 +21,11 @@ class YandexXMLSearch:
         self.search()
         
     def getTotalPageCount(self):
-        count = (self.getTotalResultCount() / 10) + 1   # count limitation will be fixed.
+        count = int((self.getTotalResultCount() / 10) + 1)   # count limitation will be fixed.
         if count > 9:
             return 10
         else:
-            return int(count)
+            return count
     
     def getTotalResultCount(self):
         results = [results for results in self.response.iter('results')][0]
